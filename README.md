@@ -1,4 +1,3 @@
-
 # Exercícios de JavaScript
 Nestes exercícios, vamos usar um case prático de um formulário de contatos simples para explorar algumas capacidades de manipulação do DOM/BOM pelo JavaScript. 
 
@@ -17,10 +16,16 @@ Siga as etapas abaixo com atenção:
   - Se não estiver, providencie pelo menu `View → Extensions`...  
 
 ## Exercício 2 - Código fornecido
-Abra o código de `exercicio_01.html` e, com a ajuda do instrutor e das referências citadas no próprio código, estude e compreenda cada linha de código.
+Faça uma cópia de `exercicio_01.html` nomeada `exercicio_02.html`, abrindo-a no VSCode.
+
+*Deixe `exercicio_01.html` intacto para servir de referência para o "case".*
+
+Com a ajuda do instrutor e das referências citadas no próprio código, estude, documente e compreenda cada linha de código, tirando as dúvidas que surgirem.
+
+*Dica: complemente a documentação fornecida com o código usando seu próprio entendimento, isso facilita a aprendizado.*
 
 ## Exercício 3 - Funções de Data
-Faça uma cópia de `exercicio_01.html` nomeada `exercicio_03.html`, abrindo-a no VSCode.
+Faça uma cópia de **`exercicio_01.html`** nomeada `exercicio_03.html`, abrindo-a no VSCode.
 
 Na sequência, crie, documente e teste uma função `dataAtual()` que retorne a data atual UTC no formado `System Date (AAAA-MM-DD HH:II:SS)`. 
 
@@ -62,5 +67,3 @@ Na sequência, edite a função `processaContato()` de forma a receber os dados 
         ...
     }
 *Dicas: obtenha o valor do campo preenchido usando a função `el()` já existente para ler o atributo `value` deste e a função `sanitiza()`, criada anteriormente, para sanitizar os dados obtidos. Por exemplo: `none: sanitiza(el('#nome').value)`.*
-
-
