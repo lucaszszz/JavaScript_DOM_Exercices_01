@@ -1,8 +1,7 @@
 
 # Exercícios de JavaScript
 Nestes exercícios, vamos usar um case prático de um formulário de contatos simples para explorar algumas capacidades de manipulação do DOM/BOM pelo JavaScript. 
- 
-<hr>
+
 ### Exercício 1 - Preparação
 Siga as etapas abaixo com atenção:
 - Loque-se  com sua conta no [GitHub](https://github.com/);
@@ -17,6 +16,5 @@ Siga as etapas abaixo com atenção:
 - Verifique se a extensão "[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)" do editor *Ritwick Dey* está instalada;
   - Se não estiver, providencie pelo menu `View → Extensions`...  
 
-<hr>
 ### Exercício 2 - Código fornecido
 Abra o código de `exercicio_modelo.html` e, com a ajuda do instrutor e das referências citadas no próprio código, estude e compreenda cada linha de código.
