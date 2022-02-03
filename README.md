@@ -1,3 +1,4 @@
+
 # Exercícios de JavaScript
 Nestes exercícios, vamos usar um case prático de um formulário de contatos simples para explorar algumas capacidades de manipulação do DOM/BOM pelo JavaScript. 
 
@@ -24,7 +25,7 @@ Com a ajuda do instrutor e das referências citadas no próprio código, estude,
 
 *Dica: complemente a documentação fornecida com o código usando seu próprio entendimento, isso facilita a aprendizado.*
 
-## Exercício 3 - Funções de Data
+## Exercício 3 - Função de Data
 Faça uma cópia de **`exercicio_01.html`** nomeada `exercicio_03.html`, abrindo-a no VSCode.
 
 Na sequência, crie, documente e teste uma função `dataAtual()` que retorne a data atual UTC no formado `System Date (AAAA-MM-DD HH:II:SS)`. 
@@ -67,3 +68,25 @@ Na sequência, edite a função `processaContato()` de forma a receber os dados 
         ...
     }
 *Dicas: obtenha o valor do campo preenchido usando a função `el()` já existente para ler o atributo `value` deste e a função `sanitiza()`, criada anteriormente, para sanitizar os dados obtidos. Por exemplo: `none: sanitiza(el('#nome').value)`.*
+
+## Exercício 6 - Campos vazios?
+Faça uma cópia de `exercicio_05.html` nomeada `exercicio_06.html`, abrindo-a no VSCode.
+
+Na sequência, edite a função `processaContato()` de forma testar se os dados obtidos do formulário, após sanitizados estão preenchidos. 
+
+*Dica: use o loop `for()` no formato `for (let  key  in  object)  {}` para varrer cada um dos atributos do objeto, acessando como `object[key]`.
+
+Caso um ou mais campos estejam em branco, o formulário não será enviado e será disparado o seguinte algoritmo:
+
+ - Os valores 'sanitizados' dos campos serão gravados no formulário;
+ 
+*Dica: use, por exemplo, `el('#campo').value = contato.campo` para atualizar o valor do campo dinamicamente.*
+
+- É emitindo um alerta para o usuário sobre a situação;
+
+- A função `processaContato()` é interrompida imediatamente, sem que continue o processamento do formulário. 
+
+> Referências:
+> - https://www.w3schools.com/jsref/met_win_alert.asp
+
+
