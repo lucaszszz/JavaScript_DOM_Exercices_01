@@ -2,7 +2,10 @@
 <html>
 
 <head>
-    <title>Atividade</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Exercices - 01</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -59,6 +62,7 @@
 
         /**
          * Esta função processa o formulario quando este for enviado.
+         * A maior parte dos códigos será criada aqui.
          */
         var processaContato = () => {
             console.log('Processando...');
@@ -73,10 +77,12 @@
         }
 
         /**
-         * Chama a função que salva os dados do formulário enviado no armazenamento local 
-         * do navegador.
+         * Esta função salva os dados do formulário enviado no armazenamento local do navegador.
+         * Ela serve como um teste de envio do formulário.
+         * Para acessar o 'Loca Storage' no Chrome, nas ferramentas do desenvolvedor (tela [F12]), 
+         * acesse a opção 'Aplicativo' → 'Armazenamento local'
          * 
-         * O parâmetro 'contatoDados' é um objeto do JavaScript.
+         * Importante! O parâmetro 'contatoDados' deve ser um objeto JavaScript.
          * 
          * Exemplo de uso:
          *   enviaContato({
@@ -87,10 +93,14 @@
          *     data: '2022-02-02 10:15:18'
          *   });
          * 
-         * Todos os campos devem ser passados como parâmetro
          *   Referências:
-         *     https://www.w3schools.com/js/js_api_web_storage.asp
-         *     https://www.w3schools.com/jsref/prop_win_localstorage.asp
+         *     • Local Storage → https://www.w3schools.com/js/js_api_web_storage.asp
+         *     • Local Storage → https://www.w3schools.com/jsref/prop_win_localstorage.asp
+         *     • JSON → https://www.w3schools.com/js/js_json_intro.asp
+         *     • JSON.stringify → https://www.w3schools.com/js/js_json_stringify.asp
+         *     • Date() → https://www.w3schools.com/jsref/jsref_obj_date.asp
+         *     • getTime() → https://www.w3schools.com/jsref/jsref_gettime.asp
+         *     • document.querySelector() → https://www.w3schools.com/jsref/met_document_queryselector.asp
          */
 
         var enviaContato = (contatoDados) => {
@@ -113,7 +123,7 @@
                 // Obtém a data atual em timestamp para servir de índice.
                 let agora = new Date().getTime();
 
-                // Comverte os dados para string (JSON).
+                // Converte os dados de objeto para uma string (JSON).
                 let dados = JSON.stringify(contatoDados);
 
                 // Salva no armazenamento local do browser e, se deu certo...
