@@ -13,10 +13,13 @@ body {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 640px;
     margin: auto;
     background: rgb(255, 255, 255);
+    
 }
 
 body>h2 {
@@ -79,9 +82,18 @@ button:hover {
     padding: 0 1rem;
 }
 
-/* Situação inicial. */
+footer {
+    font-size: small;
+    text-align: center;
+    border-top: 1px dotted grey;
+    padding: .5rem;
+    margin-top: auto;
+    background: rgb(185, 185, 185);
+}
 
-form {
+/* Situação inicial dos blocos. */
+
+#contato {
     display: block;
 }
 
