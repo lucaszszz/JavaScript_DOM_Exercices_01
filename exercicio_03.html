@@ -69,6 +69,16 @@
         var processaContato = () => {
             console.log('Processando...');
 
+
+            // Exercício 05
+            var contato = {
+                nome: sanitiza(el('#nome').value),
+                email: sanitiza(el('#email').value),
+                assunto: sanitiza(el('#assunto').value),
+                mensagem: sanitiza(el('#mensagem').value)
+            }
+
+            
             /**
              * Essa deve ser a última linha desta função.
              * Ela conclui a função sem fazer mais nada.
@@ -84,7 +94,7 @@
          * Para acessar o 'Loca Storage' no Chrome, nas ferramentas do desenvolvedor (tela [F12]), 
          * acesse a opção 'Aplicativo' → 'Armazenamento local'
          * 
-         * Importante! O parâmetro 'contatoDados' deve ser um objeto JavaScript.
+         * Importante! O parâmetro 'objDatos' deve ser um objeto JavaScript.
          * 
          * Exemplo de uso:
          *   enviaContato({
@@ -105,10 +115,10 @@
          *     • document.querySelector() → https://www.w3schools.com/jsref/met_document_queryselector.asp
          */
 
-        var enviaContato = (contatoDados) => {
+        var enviaContato = (objDatos) => {
 
             // Se os dados não são passados em um objeto...
-            if (typeof contatoDados !== 'object') {
+            if (typeof objDatos !== 'object') {
 
                 // Gera mensagem de erro.
                 let message = `Erro ao salvar os dados. Estavamos esperando um objeto.`;
@@ -126,7 +136,7 @@
                 let agora = new Date().getTime();
 
                 // Converte os dados de objeto para uma string (JSON).
-                let dados = JSON.stringify(contatoDados);
+                let dados = JSON.stringify(objDatos);
 
                 // Salva no armazenamento local do browser e, se deu certo...
                 if (localStorage.setItem(agora, dados)) {
@@ -160,13 +170,19 @@
         }
 
 
-        // Exercício 2
+
+
+
+        // Exercício 03
         var dataAtual = () => {
             return new Date().toISOString();
         }
         console.log(dataAtual());
 
-        // Exercício 3
+
+
+
+        // Exercício 04
         var sanitiza = (str) => {
             str = str.replace(/<[^>]*>?/gm, '');
             str = str.replace(/\n/g, '<br>').trim();
@@ -174,6 +190,10 @@
             return str;
         }
         console.log(sanitiza('   <p>Isso é um teste</p> de sani<b>tiza</b>ção.   '));
+
+
+
+
 
 
         /**

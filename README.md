@@ -17,4 +17,50 @@ Siga as etapas abaixo com atenção:
   - Se não estiver, providencie pelo menu `View → Extensions`...  
 
 ## Exercício 2 - Código fornecido
-Abra o código de `exercicio_modelo.html` e, com a ajuda do instrutor e das referências citadas no próprio código, estude e compreenda cada linha de código.
+Abra o código de `exercicio_01.html` e, com a ajuda do instrutor e das referências citadas no próprio código, estude e compreenda cada linha de código.
+
+## Exercício 3 - Funções de Data
+Faça uma cópia de `exercicio_01.html` nomeada `exercicio_03.html`, abrindo-a no VSCode.
+
+Na sequência, crie, documente e teste uma função `dataAtual()` que retorne a data atual UTC no formado `System Date (AAAA-MM-DD HH:II:SS)`. 
+
+**ATENÇÃO!** A data gerada será armazenada com os dados do formulário, representando assim a data de envio deste e deve estar em [UTC](https://pt.wikipedia.org/wiki/Tempo_Universal_Coordenado) - *Temps Universel Coordonné*.
+
+*Dica: Para esta função usaremos um objeto `Date()` e seu método `toISOString()` para obter um `system date`.*
+
+> Referências: 
+> - https://www.w3schools.com/jsref/jsref_toisostring.asp
+> - https://www.w3schools.com/js/js_dates.asp
+
+
+## Exercício 4 - Sanitização
+
+Faça uma cópia de `exercicio_03.html` nomeada `exercicio_04.html`, abrindo-a no VSCode.  
+
+Na sequência, crie, documente e teste uma função `sanitiza(string)` que recebe, trata e retorna a string de parâmetro da seguinte forma:
+
+- Remove qualquer tag HTML da string;
+
+*Dica: use a REGEX `/<[^>]*>?/gm` para identificar tags HTML.*
+ - Substitui as quebras de linha dos campos de formulário (`\n`) pela tag `<br>` do HTML;
+ 
+*Dica: use a REGEX `/\n/g` para identificar quebras de linha em strings.*
+- Finalmente, remova todos os espaços que ocorrerem no começo e no final da string.
+>Referências:
+> - https://www.w3schools.com/jsref/jsref_replace.asp
+> - https://www.w3schools.com/jsref/jsref_trim_string.asp
+
+## Exercício 5 - Obtendo os campos
+Faça uma cópia de `exercicio_04.html` nomeada `exercicio_05.html`, abrindo-a no VSCode.
+
+Na sequência, edite a função `processaContato()` de forma a receber os dados preenchidos no formulário, sanitiza-los e armazená-los em um objeto nomeado `contato{}`, da seguinte forma:
+   
+    var contato = {
+        nome: ...,
+        email: ...,
+        assunto:...,
+        ...
+    }
+*Dicas: obtenha o valor do campo preenchido usando a função `el()` já existente para ler o atributo `value` deste e a função `sanitiza()`, criada anteriormente, para sanitizar os dados obtidos. Por exemplo: `none: sanitiza(el('#nome').value)`.*
+
+
